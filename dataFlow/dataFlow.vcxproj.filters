@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{9c29dd02-7dbd-4b4c-839a-e0c895400f88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\util">
+      <UniqueIdentifier>{488a130e-9da5-428f-87cc-b94a4a58644d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\util\concurrency">
+      <UniqueIdentifier>{ef3ec28c-9b3d-4593-841d-177a1bfb7aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\cache">
+      <UniqueIdentifier>{e5a87b1e-d9ab-4749-89af-babcd672c43d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\src\client">
+      <UniqueIdentifier>{a0855492-2c1a-42e5-8bd5-d762d8e7dd72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DFFramework.cpp">
+      <Filter>Source Files\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\concurrency\BackgroundJob.cpp">
+      <Filter>Source Files\src\util\concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\Apprentice.cpp">
+      <Filter>Source Files\src\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\CacheBootStrapper.cpp">
+      <Filter>Source Files\src\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\Galaxy.cpp">
+      <Filter>Source Files\src\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\Jedi.cpp">
+      <Filter>Source Files\src\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\JediCouncil.cpp">
+      <Filter>Source Files\src\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\Yoda.cpp">
+      <Filter>Source Files\src\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheConfig.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheConnectionManager.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheHandle.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheHandleBase.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheHandleImpl.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheQuery.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheQueryBase.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheQueryManager.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheTail.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheTailRegistrar.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cache\CacheUpsertObserver.cpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\StringUtility.cpp">
+      <Filter>Source Files\src\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\DFFrameWork.h">
+      <Filter>Source Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\concurrency\BackgroundJob.h">
+      <Filter>Source Files\src\util\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\Apprentice.h">
+      <Filter>Source Files\src\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\CacheBootStrapper.h">
+      <Filter>Source Files\src\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\ClientFwd.h">
+      <Filter>Source Files\src\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\Galaxy.h">
+      <Filter>Source Files\src\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\Jedi.h">
+      <Filter>Source Files\src\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\JediCouncil.h">
+      <Filter>Source Files\src\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\client\Yoda.h">
+      <Filter>Source Files\src\client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheCommon.hpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheConfig.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheConnectionManager.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheFwd.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheHandle.hpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheHandleBase.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheHandleConfig.hpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheHandleImpl.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheObjectsRegistrar.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheQuery.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheQueryBase.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheQueryManager.h">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheTail.hpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheTailRegistrar.hpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cache\CacheUpsertObserver.hpp">
+      <Filter>Source Files\src\cache</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\StringUtility.h">
+      <Filter>Source Files\src\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

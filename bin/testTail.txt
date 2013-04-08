@@ -1,0 +1,5 @@
+Query Object toString: { ns: "pl.nq" }
+querying namespace: pl.nq
+Signalling Data { _id: ObjectId('515db7bc213eb2d6ce546f6a'), a: 1.0 }
+Signalling Data { _id: ObjectId('515db7dd213eb2d6ce546f6b'), aa: 1.0 }
+Signalling Data { _id: ObjectId('515db7e3213eb2d6ce546f6c'), aa: 1000.0 }

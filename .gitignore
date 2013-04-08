@@ -1,0 +1,10 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.o
+*.so
+*.obj
+
+# Visual Studio specific #
+*.opensdf

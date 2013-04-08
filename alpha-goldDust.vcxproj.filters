@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\testApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxVectorGraphics\src\ofxVectorGraphics.cpp">
+      <Filter>addons\ofxVectorGraphics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS.cpp">
+      <Filter>addons\ofxVectorGraphics\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp">
+      <Filter>addons\ofxXmlSettings\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxComposer\src\ofxBasePatch.cpp">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxComposer\src\ofxComposer.cpp">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxComposer\src\ofxPatch.cpp">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxComposer\src\ofxShaderObj.cpp">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxComposer\src\ofxTitleBar.cpp">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxGLEditor\src\ClipBoard.cpp">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxGLEditor\src\GLEditor.cpp">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxGLEditor\src\ofxGLEditor.cpp">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxGLEditor\src\PolyGlyph.cpp">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxGLEditor\src\Unicode.cpp">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834f65-f3a9-211e-73b8-dc8563776aec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxVectorGraphics">
+      <UniqueIdentifier>{5a7f3658-b06b-db97-f4e1-dd1970a8a410}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxVectorGraphics\src">
+      <UniqueIdentifier>{f615f000-d48c-b1d6-f1c2-6eddc2810357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxVectorGraphics\libs">
+      <UniqueIdentifier>{b341f552-35c4-7eb6-b3c9-9d96f0ae1975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings">
+      <UniqueIdentifier>{877f005d-13e6-0592-1d97-f2e39d804d43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings\src">
+      <UniqueIdentifier>{ccb2ac63-49d2-977c-cfe8-aeadb8be6a99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxXmlSettings\libs">
+      <UniqueIdentifier>{687714a8-1662-fa1c-261f-50f068335398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons">
+      <UniqueIdentifier>{add42d00-669b-4013-8545-c691bf2a0a0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples">
+      <UniqueIdentifier>{6d16d856-5631-4923-bb86-3b6cf7e49d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tests">
+      <UniqueIdentifier>{f06f25c7-eade-428b-8ac1-1054eb268084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons\ofxUI">
+      <UniqueIdentifier>{65e7e70d-98f9-49b0-92a5-f97d0bda3b11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons\ofxGLEditor">
+      <UniqueIdentifier>{1f588b01-43a3-4efe-ba01-2cc43cf3a84f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons\ofxComposer">
+      <UniqueIdentifier>{89a6724b-9762-4854-b9fe-a8fa8b26797f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons\ofxComposer\src">
+      <UniqueIdentifier>{ecf43355-d33d-4ca1-8c0c-d61a12e122f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons\ofxGLEditor\src">
+      <UniqueIdentifier>{e332dddd-4b03-45cb-a992-04c8461c4508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons\ofxUI\src">
+      <UniqueIdentifier>{63eddcb0-587d-42b9-ab6a-15cbd0704541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxUI">
+      <UniqueIdentifier>{df842f96-72c0-4686-9b62-3e45adecc3df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxGLEditor">
+      <UniqueIdentifier>{4b6d372a-99d1-41b8-a158-49f44d2aba8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\Awesomium">
+      <UniqueIdentifier>{decbf3e8-ec52-4aaf-9b8a-0828c5e09c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxComposer">
+      <UniqueIdentifier>{0be39777-e127-4d31-9cf3-a45b61b9acda}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\testApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxVectorGraphics\src\ofxVectorGraphics.h">
+      <Filter>addons\ofxVectorGraphics\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS.hpp">
+      <Filter>addons\ofxVectorGraphics\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS_Types.hpp">
+      <Filter>addons\ofxVectorGraphics\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h">
+      <Filter>addons\ofxXmlSettings\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h">
+      <Filter>addons\ofxXmlSettings\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxBasePatch.h">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxComposer.h">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxPatch.h">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxPingPong.h">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxShaderObj.h">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxTitleBar.h">
+      <Filter>src\xtra_addons\ofxComposer\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxGLEditor\src\ClipBoard.h">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxGLEditor\src\GLEditor.h">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxGLEditor\src\ofxGLEditor.h">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxGLEditor\src\PolyGlyph.h">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxGLEditor\src\Unicode.h">
+      <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUI.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUI2DGraph.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUI2DPad.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIBaseDraws.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIBiLabelSlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIButton.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUICanvas.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUICircleSlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUICustomImageButton.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIDropDownList.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIEventArgs.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIFPS.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIFPSSlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIImage.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIImageButton.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIImageSampler.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIImageSlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIImageToggle.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUILabel.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUILabelButton.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUILabelToggle.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIMinimalSlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIMovingGraph.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIMultiImageButton.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIMultiImageSlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIMultiImageToggle.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUINumberDialer.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIRadio.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIRangeSlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIRectangle.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIRotarySlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIScrollableCanvas.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUISlider.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUISpacer.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUISpectrum.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUISuperCanvas.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUITextArea.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUITextInput.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIToggle.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIToggleMatrix.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIValuePlotter.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIWaveform.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIWidget.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIWidgetWithLabel.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
