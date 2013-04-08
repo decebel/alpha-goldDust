@@ -1,4 +1,4 @@
-/* Copyright 2007-2011 Solace Systems, Inc. All rights reserved. */
+
 
 #include "RL/util/os.h"
 
@@ -263,7 +263,7 @@ UINT64 getCpuSpeedInHz(void)
 					std::string model(cpuinfoLine,
 						cpuinfoLine.find(": ") + 2);
 					tmpSpeed =
-						(solace::pubsub::UINT64) (atof(model.c_str()) *
+						(pubsub::UINT64) (atof(model.c_str()) *
 						1000000.0);
 
 					if ((procSpeed != 0) && (procSpeed != tmpSpeed)) {
