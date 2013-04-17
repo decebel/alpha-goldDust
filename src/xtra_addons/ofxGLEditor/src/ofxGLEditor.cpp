@@ -253,12 +253,12 @@ void ofxGLEditor::reShape(){
 
 //--------------------------------------------------------------
 void ofxGLEditor::pasteFromClipBoard(){
-	glEditor[currentEditor]->InsertText(clipBoard.getText());
+	//glEditor[currentEditor]->InsertText(clipBoard.getText());
 }
 
 //--------------------------------------------------------------
 void ofxGLEditor::copyToClipBoard(){
-	clipBoard.setText(wstring_to_string(glEditor[currentEditor]->GetText()));
+	//clipBoard.setText(wstring_to_string(glEditor[currentEditor]->GetText()));
 }
 
 //--------------------------------------------------------------

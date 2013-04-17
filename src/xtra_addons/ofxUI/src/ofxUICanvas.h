@@ -715,6 +715,9 @@ public:
 
         for(vector<ofxUIWidget *>::reverse_iterator it = widgets.rbegin(); it != widgets.rend(); ++it)
         {
+			//if((*it)->getName() == "test")
+			//	std::cout<<"name="<<(*it)->getName()<<" "<<std::boolalpha<<(*it)->getRect()->rInside(*rect)<<std::endl;
+
             if((*it)->isVisible() && ((*it)->getRect()->rInside(*rect) || (*it)->isModal()))
             {
                 (*it)->draw(); 	

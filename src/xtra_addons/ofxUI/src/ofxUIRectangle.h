@@ -238,8 +238,23 @@ public:
     //give an input rect, let me know if I am inside of it (completely, no overflow)
     bool rInside(const ofRectangle& rect)
     {
-        return (getRelativeMinX() > rect.getMinX() && getRelativeMaxX() < rect.getMaxX() &&
+
+        bool s = (getRelativeMinX() > rect.getMinX() && getRelativeMaxX() < rect.getMaxX() &&
                 getRelativeMinY() > rect.getMinY() && getRelativeMaxY() < rect.getMaxY());
+
+		if(!s) {
+
+			std::cout<<"rMinX="<<getRelativeMinX() <<" rectMinX="<<rect.getMinX()<<" rMaxX="<<getRelativeMaxX()<<" rectMax="<<
+			rect.getMaxX()<<" rMinY="<<getRelativeMinY()<<" rectMinY "<<rect.getMinY()<<" rMaxY="<<getRelativeMaxY()<<" rectMaxY="<< rect.getMaxY()<<
+			std::endl;
+
+		}
+
+		return s;
+
+        //return (getRelativeMinX() > rect.getMinX() && getRelativeMaxX() < rect.getMaxX() &&
+        //        getRelativeMinY() > rect.getMinY() && getRelativeMaxY() < rect.getMaxY());
+
     }
 
 protected: 

@@ -80,13 +80,13 @@ public:
         
         ofEnableBlendMode(OF_BLENDMODE_ALPHA); 
         
-        drawPadded();
-        drawPaddedOutline();        
+        //drawPadded();
+        //drawPaddedOutline();        
 
-        drawBack();
+        //drawBack();
         
         drawOutline();
-        drawOutlineHighlight();
+        //drawOutlineHighlight();
         
         drawFill();
         drawFillHighlight();
