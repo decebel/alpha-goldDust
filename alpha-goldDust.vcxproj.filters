@@ -55,6 +55,81 @@
     <ClCompile Include="src\xtra_addons\ofxGLEditor\src\Unicode.cpp">
       <Filter>src\xtra_addons\ofxGLEditor\src</Filter>
     </ClCompile>
+    <ClCompile Include="src\examples\example_webUI_copyPaste\main.cpp">
+      <Filter>src\examples\example_webUI_copyPaste</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example_webUI_copyPaste\testApp.cpp">
+      <Filter>src\examples\example_webUI_copyPaste</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUITutorial\src\main.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUITutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUITutorial\src\testApp.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUITutorial</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUIAllWidgets\src\main.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUIAllWidgets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUIAllWidgets\src\testApp.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUIAllWidgets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example_webUI_copyPaste\clipBoardWin.cpp">
+      <Filter>src\examples\example_webUI_copyPaste</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxUI\example-ofxUISliders\src\main.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUISliders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxUI\example-ofxUISliders\src\testApp.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUISliders</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example_of_basics\texturing\main.cpp">
+      <Filter>src\examples\example_of_basics\texturing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example_of_basics\texturing\testApp.cpp">
+      <Filter>src\examples\example_of_basics\texturing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUICanvasMapVector\src\main.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUICanvasMapVector</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUICanvasMapVector\src\testApp.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUICanvasMapVector</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUICustomPlacement\src\main.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUICustomPlacement</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUICustomPlacement\src\testApp.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUICustomPlacement</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUIContextualMenu\src\main.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUIContextualMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUIContextualMenu\src\testApp.cpp">
+      <Filter>src\examples\ofxUI\example-ofxUIContextualMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateText.cpp">
+      <Filter>src\xtra_addons\ofxAnimateText</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateTextManager.cpp">
+      <Filter>src\xtra_addons\ofxAnimateText</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateTextPolyline.cpp">
+      <Filter>src\xtra_addons\ofxAnimateText</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\main.cpp">
+      <Filter>src\xtra_addons\ofxAnimateText\example</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\take.cpp">
+      <Filter>src\xtra_addons\ofxAnimateText\example</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\takeManager.cpp">
+      <Filter>src\xtra_addons\ofxAnimateText\example</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\testApp.cpp">
+      <Filter>src\xtra_addons\ofxAnimateText\example</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\scripting\ScriptEngineBridger.cpp">
+      <Filter>src\examples\scripting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -114,11 +189,44 @@
     <Filter Include="src\examples\ofxGLEditor">
       <UniqueIdentifier>{4b6d372a-99d1-41b8-a158-49f44d2aba8a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\examples\Awesomium">
-      <UniqueIdentifier>{decbf3e8-ec52-4aaf-9b8a-0828c5e09c96}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\examples\ofxComposer">
       <UniqueIdentifier>{0be39777-e127-4d31-9cf3-a45b61b9acda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\example_webUI_copyPaste">
+      <UniqueIdentifier>{decbf3e8-ec52-4aaf-9b8a-0828c5e09c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxUI\example-ofxUITutorial">
+      <UniqueIdentifier>{7e4cb1ba-032c-4b3f-92ab-04d6cdc25245}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxUI\example-ofxUIAllWidgets">
+      <UniqueIdentifier>{059a5419-e2ac-44f0-be2d-e9d8829841fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxUI\example-ofxUISliders">
+      <UniqueIdentifier>{be8e4a29-95a5-47f9-9718-dfb1f2066e84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\example_of_basics">
+      <UniqueIdentifier>{2c5eb256-0949-47bc-9a74-721bb7fa73e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\example_of_basics\texturing">
+      <UniqueIdentifier>{05be06ea-4ce0-4fd5-acb8-07d65a17fe21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxUI\example-ofxUICanvasMapVector">
+      <UniqueIdentifier>{0420289e-709e-4ad0-b548-b59f48477d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxUI\example-ofxUICustomPlacement">
+      <UniqueIdentifier>{99402ac3-8014-4e15-acab-c86cb351672d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\ofxUI\example-ofxUIContextualMenu">
+      <UniqueIdentifier>{6a4ca760-d181-4521-b9b8-06bb53f22c22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons\ofxAnimateText">
+      <UniqueIdentifier>{2b0be61b-5fc8-40cc-9db2-557e370d73f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xtra_addons\ofxAnimateText\example">
+      <UniqueIdentifier>{2a079441-4218-4df1-8957-b9a80ee7ff68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\scripting">
+      <UniqueIdentifier>{c5994ed3-5c38-4c11-9a47-f7d4fd17b988}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -304,6 +412,57 @@
     </ClInclude>
     <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUIWidgetWithLabel.h">
       <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\example_webUI_copyPaste\testApp.h">
+      <Filter>src\examples\example_webUI_copyPaste</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUITutorial\src\testApp.h">
+      <Filter>src\examples\ofxUI\example-ofxUITutorial</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUIAllWidgets\src\testApp.h">
+      <Filter>src\examples\ofxUI\example-ofxUIAllWidgets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\example_webUI_copyPaste\clipBoardWin.h">
+      <Filter>src\examples\example_webUI_copyPaste</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxTexturedUI.h">
+      <Filter>src\xtra_addons\ofxUI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\example-ofxUISliders\src\testApp.h">
+      <Filter>src\examples\ofxUI\example-ofxUISliders</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\example_of_basics\texturing\testApp.h">
+      <Filter>src\examples\example_of_basics\texturing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUICanvasMapVector\src\testApp.h">
+      <Filter>src\examples\ofxUI\example-ofxUICanvasMapVector</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUICustomPlacement\src\testApp.h">
+      <Filter>src\examples\ofxUI\example-ofxUICustomPlacement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUIContextualMenu\src\testApp.h">
+      <Filter>src\examples\ofxUI\example-ofxUIContextualMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateText.h">
+      <Filter>src\xtra_addons\ofxAnimateText</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateTextManager.h">
+      <Filter>src\xtra_addons\ofxAnimateText</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateTextPolyline.h">
+      <Filter>src\xtra_addons\ofxAnimateText</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\take.h">
+      <Filter>src\xtra_addons\ofxAnimateText\example</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\takeManager.h">
+      <Filter>src\xtra_addons\ofxAnimateText\example</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\testApp.h">
+      <Filter>src\xtra_addons\ofxAnimateText\example</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\scripting\ScriptEngineBridger.h">
+      <Filter>src\examples\scripting</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

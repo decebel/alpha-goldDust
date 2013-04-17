@@ -8,3 +8,8 @@
 
 # Visual Studio specific #
 *.opensdf
+*.sdf
+*.log
+ipch
+obj
+

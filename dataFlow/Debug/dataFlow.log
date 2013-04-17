@@ -1,9 +1,39 @@
-﻿Build started 4/7/2013 10:45:07 PM.
-     1>Project "C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\dataFlow\dataFlow.vcxproj" on node 2 (clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\dataFlow.lastbuildstate".
-     1>Done Building Project "C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\dataFlow\dataFlow.vcxproj" (clean target(s)).
+﻿Build started 4/17/2013 2:35:31 PM.
+     1>Project "C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\dataFlow\dataFlow.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\dataFlow.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\dataFlow.dll.embed.manifest.res" Debug\dataFlow_manifest.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\Debug\dataFlow.dll) does not match the Linker's OutputFile property value (C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\Debug\dataFlow_d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(dataFlow) does not match the Linker's OutputFile property value (dataFlow_d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\Debug\dataFlow_d.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\boost\boost_1_47\lib" /LIBPATH:"C:\Amit\dev\cpp\external\mongodb-src-r2.0.9\mongodb-src-r2.0.9\bin\debug" mongoclient.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\dataFlow.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\Debug\dataFlow.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\Debug\dataFlow_d.lib" /MACHINE:X86 /DLL Debug\dataFlow.dll.embed.manifest.res
+         Debug\CacheConfig.obj
+         Debug\CacheConnectionManager.obj
+         Debug\CacheHandleBase.obj
+         Debug\CacheHandleImpl.obj
+         Debug\CacheQuery.obj
+         Debug\CacheQueryBase.obj
+         Debug\CacheQueryManager.obj
+         Debug\Apprentice.obj
+         Debug\CacheBootStrapper.obj
+         Debug\Yoda.obj
+         Debug\DFFramework.obj
+         Debug\BackgroundJob.obj
+         Debug\StringUtility.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\dataFlow.dll.embed.manifest" /manifest Debug\dataFlow.dll.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         dataFlow.vcxproj -> C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\Debug\dataFlow.dll
+       FinalizeBuildStatus:
+         Deleting file "Debug\dataFlow.unsuccessfulbuild".
+         Touching "Debug\dataFlow.lastbuildstate".
+     1>Done Building Project "C:\Amit\dev\cpp\of_v0.7.4_vs2010_release\of_v0.7.4_vs2010_release\apps\myApps\alpha-goldDust\dataFlow\dataFlow.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.03
+Time Elapsed 00:00:02.85

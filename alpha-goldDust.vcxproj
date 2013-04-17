@@ -58,7 +58,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;src\xtra_addons\ofxComposer\src;src\xtra_addons\ofxGLEditor\src;src\xtra_addons\ofxUI\src;src;dataFlow\src;$(CPP_EXTERNAL)\mongodb-src-r2.0.9\mongodb-src-r2.0.9\client;$(CPP_EXTERNAL)\zeromq-3.2.2\include;$(CPP_EXTERNAL)\cppzmq;C:\Program Files (x86)\boost\boost_1_47;C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.0.5\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;src\xtra_addons\ofxComposer\src;src\xtra_addons\ofxGLEditor\src;src\xtra_addons\ofxAnimateText\src;src\xtra_addons\ofxUI\src;src;dataFlow\src;$(CPP_EXTERNAL)\mongodb-src-r2.0.9\mongodb-src-r2.0.9\client;$(CPP_EXTERNAL)\zeromq-3.2.2\include;$(CPP_EXTERNAL)\cppzmq;C:\Program Files (x86)\boost\boost_1_47;C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.0.5\include;C:\Python27\include;src\examples\scripting</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
@@ -69,7 +69,7 @@
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>mongoclient.lib;dataflow_d.lib;libzmq_d.lib;ws2_32.lib;awesomium.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>Debug;$(CPP_EXTERNAL)\mongodb-src-r2.0.9\mongodb-src-r2.0.9\bin\debug;$(CPP_EXTERNAL)\zeromq-3.2.2\lib\Win32;C:\Program Files %28x86%29\boost\boost_1_47\lib;C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.0.5\build\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>Debug;$(CPP_EXTERNAL)\mongodb-src-r2.0.9\mongodb-src-r2.0.9\bin\debug;$(CPP_EXTERNAL)\zeromq-3.2.2\lib\Win32;C:\Program Files %28x86%29\boost\boost_1_47\lib;C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.0.5\build\lib;C:\Python27\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent />
   </ItemDefinitionGroup>
@@ -81,7 +81,7 @@
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat />
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;src\xtra_addons\ofxComposer\src;src\xtra_addons\ofxGLEditor\src;src\xtra_addons\ofxUI\src;src;dataFlow\src;$(CPP_EXTERNAL)\mongodb-src-r2.0.9\mongodb-src-r2.0.9\client;$(CPP_EXTERNAL)\zeromq-3.2.2\include;$(CPP_EXTERNAL)\cppzmq;C:\Program Files (x86)\boost\boost_1_47;C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.0.5\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxVectorGraphics\libs;..\..\..\addons\ofxVectorGraphics\src;..\..\..\addons\ofxXmlSettings\libs;..\..\..\addons\ofxXmlSettings\src;src\xtra_addons\ofxComposer\src;src\xtra_addons\ofxGLEditor\src;src\xtra_addons\ofxUI\src;src;dataFlow\src;$(CPP_EXTERNAL)\mongodb-src-r2.0.9\mongodb-src-r2.0.9\client;$(CPP_EXTERNAL)\zeromq-3.2.2\include;$(CPP_EXTERNAL)\cppzmq;C:\Program Files (x86)\boost\boost_1_47;C:\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.0.5\include;src\examples\scripting</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -99,14 +99,73 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\testApp.cpp" />
+    <ClCompile Include="src\examples\example-ofxUIAllWidgets\src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUIAllWidgets\src\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUICanvasMapVector\src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUICanvasMapVector\src\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUIContextualMenu\src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUIContextualMenu\src\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUICustomPlacement\src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUICustomPlacement\src\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUITutorial\src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example-ofxUITutorial\src\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example_of_basics\texturing\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example_of_basics\texturing\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\examples\example_webUI_copyPaste\clipBoardWin.cpp" />
+    <ClCompile Include="src\examples\example_webUI_copyPaste\main.cpp" />
+    <ClCompile Include="src\examples\example_webUI_copyPaste\testApp.cpp" />
+    <ClCompile Include="src\examples\scripting\ScriptEngineBridger.cpp" />
+    <ClCompile Include="src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxVectorGraphics\src\ofxVectorGraphics.cpp" />
     <ClCompile Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\take.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\takeManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateText.cpp" />
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateTextManager.cpp" />
+    <ClCompile Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateTextPolyline.cpp" />
     <ClCompile Include="src\xtra_addons\ofxComposer\src\ofxBasePatch.cpp" />
     <ClCompile Include="src\xtra_addons\ofxComposer\src\ofxComposer.cpp" />
     <ClCompile Include="src\xtra_addons\ofxComposer\src\ofxPatch.cpp" />
@@ -117,14 +176,55 @@
     <ClCompile Include="src\xtra_addons\ofxGLEditor\src\ofxGLEditor.cpp" />
     <ClCompile Include="src\xtra_addons\ofxGLEditor\src\PolyGlyph.cpp" />
     <ClCompile Include="src\xtra_addons\ofxGLEditor\src\Unicode.cpp" />
+    <ClCompile Include="src\xtra_addons\ofxUI\example-ofxUISliders\src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\xtra_addons\ofxUI\example-ofxUISliders\src\testApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\testApp.h" />
+    <ClInclude Include="src\examples\example-ofxUIAllWidgets\src\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUICanvasMapVector\src\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUIContextualMenu\src\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUICustomPlacement\src\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\examples\example-ofxUITutorial\src\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\examples\example_of_basics\texturing\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\examples\example_webUI_copyPaste\clipBoardWin.h" />
+    <ClInclude Include="src\examples\example_webUI_copyPaste\testApp.h" />
+    <ClInclude Include="src\examples\scripting\ScriptEngineBridger.h" />
+    <ClInclude Include="src\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxVectorGraphics\src\ofxVectorGraphics.h" />
     <ClInclude Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS.hpp" />
     <ClInclude Include="..\..\..\addons\ofxVectorGraphics\libs\CreEPS_Types.hpp" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\take.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\takeManager.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\example\AnimateTextExample\src\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateText.h" />
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateTextManager.h" />
+    <ClInclude Include="src\xtra_addons\ofxAnimateText\src\ofxAnimateTextPolyline.h" />
     <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxBasePatch.h" />
     <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxComposer.h" />
     <ClInclude Include="src\xtra_addons\ofxComposer\src\ofxPatch.h" />
@@ -136,6 +236,10 @@
     <ClInclude Include="src\xtra_addons\ofxGLEditor\src\ofxGLEditor.h" />
     <ClInclude Include="src\xtra_addons\ofxGLEditor\src\PolyGlyph.h" />
     <ClInclude Include="src\xtra_addons\ofxGLEditor\src\Unicode.h" />
+    <ClInclude Include="src\xtra_addons\ofxUI\example-ofxUISliders\src\testApp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\xtra_addons\ofxUI\src\ofxTexturedUI.h" />
     <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUI.h" />
     <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUI2DGraph.h" />
     <ClInclude Include="src\xtra_addons\ofxUI\src\ofxUI2DPad.h" />
