@@ -1,5 +1,5 @@
 #include "ScriptEngineBridger.h"
-
+#include <vector>
 #include <boost/python.hpp>
 
 namespace python = boost::python;
@@ -19,6 +19,7 @@ public:
   virtual ~CppDerived() {}
   virtual std::string hello() { return "Hello from C++!";}
 };
+
 
 
 // Familiar Boost.Python wrapper class for Base
@@ -43,6 +44,104 @@ BOOST_PYTHON_MODULE(embedded_hello)
 {
   python::class_<BaseWrap, boost::noncopyable> base("Base");
 }
+
+/// 
+/// \TODO: move to appropriate header
+struct DataSchema {
+
+};
+
+
+class DataDriver {
+
+};
+
+class DataDriverStats {
+
+};
+
+
+
+struct SpringBoardDataManager {
+
+
+	std::string version() const {
+		return "0.1";
+	}
+
+	///
+	/// \brief plugins can use this method to perform app logging 
+	///
+	/// \param[in] msg_ message to log
+	/// \return void
+	///
+
+	void log_message(const std::string& msg_) const {
+
+	}
+
+	///
+	/// \brief plugins can use this method to display an error message
+	///
+	/// \param[in] msg_ message to display
+	/// \param[in] sender_ sender name. usually the plugin name
+	///
+
+	void error_message(const std::string& msg_, const std::string& sender_) {
+
+	}
+	
+	std::vector<std::string> get_all_market_names() {
+
+		std::vector<std::string> v;
+		return v;
+	}
+
+
+	std::vector<std::string> get_market_streams(const std::string& marketname_) {
+		std::vector<std::string> v;
+		return v;
+	}
+
+
+	DataSchema get_stream_schema(const std::string& stream_) {
+		return DataSchema();
+	}
+
+	DataDriver* get_input_datadriver(const std::string& driver_) {
+		return 0;
+	}
+
+	DataDriver* get_output_datadriver(const std::string& driver_) {
+		return 0;
+	}
+
+	DataDriverStats  get_stream_stats(const std::string& stream_) {
+		return DataDriverStats ();
+	}
+
+
+	bool set_new_stream(const std::string& streamname_, const DataSchema& schema_) {
+		return true;
+	}
+
+	void bind(const std::string& stream_, DataDriver* driver_, const std::string& filter_) {
+
+	}
+
+	void unbind(const std::string& stream_, const DataDriver* driver_, const std::string& filter_) {
+
+	}
+
+	void onData(const std::string& stream_, const std::string& tuple) {
+
+	}
+
+
+
+
+};
+
 
 void exec_test()
 {
@@ -95,6 +194,39 @@ ScriptEngineBridger& ScriptEngineBridger::instance() {
 	static ScriptEngineBridger instance;
 	return instance;
 }
+
+class Scope {
+
+public:
+	
+	python::object scope;
+	python::object scope_dict;
+
+	void initialize(const std::string& module = "__main__") {
+
+		// Retrieve the module
+		scope = python::import(module.c_str());
+  
+		// Retrieve the module's namespace
+		scope_dict  = (scope.attr("__dict__"));
+	
+	}
+
+	void loadPluginManagerModule() {
+
+
+	}
+
+	void loadPlugins() {
+
+
+
+	}
+
+
+
+
+};
 
 class ScriptEngineBridger::ScriptEngine {
 
