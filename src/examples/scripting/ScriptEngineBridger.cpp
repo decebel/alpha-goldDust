@@ -61,6 +61,11 @@ class DataDriverStats {
 };
 
 
+///
+/// \class SpringBoardDataManager 
+/// \brief main plugin manager class to be exposed for script writers
+///
+
 
 struct SpringBoardDataManager {
 
@@ -136,11 +141,19 @@ struct SpringBoardDataManager {
 	void onData(const std::string& stream_, const std::string& tuple) {
 
 	}
-
-
-
-
 };
+
+
+
+BOOST_PYTHON_MODULE(sbdatamanager)
+{
+	python::class_<SpringBoardDataManager>("SpringBoardDataManager")
+		.def("version", &SpringBoardDataManager::version)
+		.def("log_message", &SpringBoardDataManager::log_message)
+
+		;
+
+}
 
 
 void exec_test()
@@ -187,6 +200,21 @@ void exec_test()
   // Make sure the right 'hello' method is called.
   //BOOST_TEST(py.hello() == "Hello from Python!");
 
+	std::string script_ = "C:\\Amit\\dev\\cpp\\of_v0.7.4_vs2010_release\\of_v0.7.4_vs2010_release\\apps\\myApps\\alpha-goldDust\\bin\\data\\packages\\springboard.py";
+	python::object fileresult = python::exec_file(script_.c_str(), global, global);
+
+	python::object input_dd = global["create_input_datadrivers"];
+	python::object input_dd_objects = input_dd();
+	python::object iter_obj = python::object( python::handle<>( PyObject_GetIter( input_dd_objects.ptr() ) ));
+
+	python::object obj = python::extract<python::object>( iter_obj.attr( "next" )() );
+	int val = python::extract<int>( obj );
+
+
+
+	//int len = python::extract<int>(input_dd_objects.attr("count"));
+	std::cout<<"len = "<<val<<std::endl;
+
   std::cout << "success!" << std::endl;
 }
 
@@ -208,8 +236,7 @@ public:
 		scope = python::import(module.c_str());
   
 		// Retrieve the module's namespace
-		scope_dict  = (scope.attr("__dict__"));
-	
+		scope_dict  = (scope.attr("__dict__"));	
 	}
 
 	void loadPluginManagerModule() {
@@ -217,8 +244,10 @@ public:
 
 	}
 
-	void loadPlugins() {
+	void loadPlugins(const std::string& scriptFile_) {
 
+		std::string script_ = "C:\\Amit\\dev\\cpp\\of_v0.7.4_vs2010_release\\of_v0.7.4_vs2010_release\\apps\\myApps\\alpha-goldDust\\bin\\data\\packages\\sprintboard.py";
+		python::object result = python::exec_file(script_.c_str(), scope, scope);
 
 
 	}
