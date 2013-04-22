@@ -39,12 +39,6 @@ struct BaseWrap : Base, python::wrapper<Base>
   }
 };
 
-// Pack the Base class wrapper into a module
-BOOST_PYTHON_MODULE(embedded_hello)
-{
-  python::class_<BaseWrap, boost::noncopyable> base("Base");
-}
-
 /// 
 /// \TODO: move to appropriate header
 struct DataSchema {
@@ -70,7 +64,7 @@ class DataDriverStats {
 struct SpringBoardDataManager {
 
 
-	std::string version() const {
+	static std::string version() {
 		return "0.1";
 	}
 
@@ -81,7 +75,7 @@ struct SpringBoardDataManager {
 	/// \return void
 	///
 
-	void log_message(const std::string& msg_) const {
+	static void log_message(const std::string& msg_) {
 
 	}
 
@@ -92,64 +86,85 @@ struct SpringBoardDataManager {
 	/// \param[in] sender_ sender name. usually the plugin name
 	///
 
-	void error_message(const std::string& msg_, const std::string& sender_) {
+	static void error_message(const std::string& msg_, const std::string& sender_) {
 
 	}
 	
-	std::vector<std::string> get_all_market_names() {
+	static std::vector<std::string> get_all_market_names() {
 
 		std::vector<std::string> v;
 		return v;
 	}
 
 
-	std::vector<std::string> get_market_streams(const std::string& marketname_) {
+	static std::vector<std::string> get_market_streams(const std::string& marketname_) {
 		std::vector<std::string> v;
 		return v;
 	}
 
 
-	DataSchema get_stream_schema(const std::string& stream_) {
+	static DataSchema get_stream_schema(const std::string& stream_) {
 		return DataSchema();
 	}
 
-	DataDriver* get_input_datadriver(const std::string& driver_) {
+	static DataDriver* get_input_datadriver(const std::string& driver_) {
 		return 0;
 	}
 
-	DataDriver* get_output_datadriver(const std::string& driver_) {
+	static DataDriver* get_output_datadriver(const std::string& driver_) {
 		return 0;
 	}
 
-	DataDriverStats  get_stream_stats(const std::string& stream_) {
+	static DataDriverStats  get_stream_stats(const std::string& stream_) {
 		return DataDriverStats ();
 	}
 
 
-	bool set_new_stream(const std::string& streamname_, const DataSchema& schema_) {
+	static bool set_new_stream(const std::string& streamname_, const DataSchema& schema_, const std::string& market_) {
 		return true;
 	}
 
-	void bind(const std::string& stream_, DataDriver* driver_, const std::string& filter_) {
+	static void bind(const std::string& stream_, DataDriver* driver_, const std::string& filter_) {
 
 	}
 
-	void unbind(const std::string& stream_, const DataDriver* driver_, const std::string& filter_) {
+	static void unbind(const std::string& stream_, const DataDriver* driver_, const std::string& filter_) {
 
 	}
 
-	void onData(const std::string& stream_, const std::string& tuple) {
+	static void onData(const std::string& stream_, const std::string& tuple) {
 
 	}
 };
 
-
-
-BOOST_PYTHON_MODULE(sbdatamanager)
+// Pack the Base class wrapper into a module
+BOOST_PYTHON_MODULE(embedded_hello)
 {
-	python::class_<SpringBoardDataManager>("SpringBoardDataManager")
+  python::class_<BaseWrap, boost::noncopyable> base("Base");
+}
+
+BOOST_PYTHON_MODULE(sb_datamanager)
+{
+	python::class_<SpringBoardDataManager, boost::noncopyable>("SpringBoardDataManager")
 		.def("version", &SpringBoardDataManager::version)
+		.staticmethod("version")
 		.def("log_message", &SpringBoardDataManager::log_message)
+		.staticmethod("log_message")
+		.def("error_message", &SpringBoardDataManager::error_message)
+		.staticmethod("error_message")
+		.def("get_all_market_names", &SpringBoardDataManager::get_all_market_names)
+		.staticmethod("get_all_market_names")
+		.def("get_market_streams", &SpringBoardDataManager::get_market_streams)
+		.staticmethod("get_market_streams")
+		.def("get_stream_schema", &SpringBoardDataManager::get_stream_schema)
+		.staticmethod("get_stream_schema")
+		//.def("get_input_datadriver", &SpringBoardDataManager::get_input_datadriver)
+		//.def("get_output_datadriver", &SpringBoardDataManager::get_output_datadriver)
+		//.def("get_stream_stats", &SpringBoardDataManager::get_stream_stats)
+		//.def("set_new_stream", &SpringBoardDataManager::set_new_stream)
+		//.def("bind", &SpringBoardDataManager::bind)
+		//.def("unbind", &SpringBoardDataManager::unbind)
+		//.def("onData", &SpringBoardDataManager::onData)
 
 		;
 
@@ -164,9 +179,9 @@ void exec_test()
   Py_Initialize();
 
   // Register the module with the interpreter
-  if (PyImport_AppendInittab("embedded_hello", initembedded_hello) == -1)
-    throw std::runtime_error("Failed to add embedded_hello to the interpreter's "
-                 "builtin modules");
+  //if (PyImport_AppendInittab("embedded_hello", initembedded_hello) == -1)
+  //  throw std::runtime_error("Failed to add embedded_hello to the interpreter's "
+  //               "builtin modules");
 
   std::cout << "defining Python class derived from Base..." << std::endl;
   
@@ -182,6 +197,12 @@ void exec_test()
     "class PythonDerived(Base):          \n"
     "    def hello(self):                \n"
     "        return 'Hello from Python!' \n",
+    global, global);
+
+
+  // Define the plugin manager class in Python.
+  python::object result_sbdm = python::exec(
+    "from sb_datamanager import SpringBoardDataManager   \n",
     global, global);
 
   python::object PythonDerived = global["PythonDerived"];
@@ -227,16 +248,26 @@ class Scope {
 
 public:
 	
-	python::object scope;
-	python::object scope_dict;
+	python::object main;
+	python::object main_dict;
+	python::object datamanager;
 
-	void initialize(const std::string& module = "__main__") {
+	void initialize() {
 
 		// Retrieve the module
-		scope = python::import(module.c_str());
+		main = python::import("__main__");
   
 		// Retrieve the module's namespace
-		scope_dict  = (scope.attr("__dict__"));	
+		main_dict  = (main.attr("__dict__"));
+
+		// Register the module with the interpreter
+		if (PyImport_AppendInittab("sbdatamanager", sb_datamanager) == -1)
+			throw std::runtime_error("Failed to add sbdatamanager to the interpreter's "
+                 "builtin modules");
+
+		std::cout << "defining Python class sbdatamanager ..." << std::endl;
+
+
 	}
 
 	void loadPluginManagerModule() {
@@ -247,7 +278,7 @@ public:
 	void loadPlugins(const std::string& scriptFile_) {
 
 		std::string script_ = "C:\\Amit\\dev\\cpp\\of_v0.7.4_vs2010_release\\of_v0.7.4_vs2010_release\\apps\\myApps\\alpha-goldDust\\bin\\data\\packages\\sprintboard.py";
-		python::object result = python::exec_file(script_.c_str(), scope, scope);
+		python::object result = python::exec_file(script_.c_str(), main, main);
 
 
 	}
