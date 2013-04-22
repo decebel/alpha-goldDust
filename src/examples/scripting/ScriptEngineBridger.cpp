@@ -255,6 +255,9 @@ public:
 
 	void initialize() {
 
+		// Initialize the interpreter
+		Py_Initialize();
+
 		// Retrieve the module
 		main = python::import("__main__");
 
@@ -268,15 +271,25 @@ public:
 
 		std::cout << "defining Python class sbdatamanager ..." << std::endl;
 
-
 		// Define the plugin manager class in Python.
 		result_sbdm = python::exec(
 			"from sbdatamanager import SpringBoardDataManager   \n",
 			main_dict, main_dict);
 
+		// Define the plugin manager class in Python.
+		python::object versionResult = python::exec(
+			"sb_ver = SpringBoardDataManager.version()   \n",
+			main_dict, main_dict);
 
+		std::string ver = python::extract<std::string>(main_dict["sb_ver"]);
+		std::cout<<"springBoardDataManager version = "<<ver<<std::endl;
 
+		// version check code and make sure the class is loaded correctly
+		//python::object springBoardDataManager = main_dict["SpringBoardDataManager"];
 
+		//std::string versionStr = python::extract<std::string>(springBoardDataManager.attr("version"));
+
+		//std::cout << "SpringBoardDataManager version ..." <<versionStr<< std::endl;
 	}
 
 	void loadPluginManagerModule() {
@@ -299,7 +312,10 @@ public:
 
 class ScriptEngineBridger::ScriptEngine {
 
+	Scope _scope;
+
 public:
+	
 	ScriptEngine() {}
 
 	void initialize() {
@@ -307,7 +323,9 @@ public:
 	}
 
 	void testEngine() {
-		exec_test();
+		//exec_test();
+		_scope.initialize();
+
 	}
 };
 
