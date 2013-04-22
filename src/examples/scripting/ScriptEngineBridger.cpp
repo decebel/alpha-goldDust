@@ -294,14 +294,12 @@ public:
 
 	void loadPluginManagerModule() {
 
-
 	}
 
 	void loadPlugins(const std::string& scriptFile_) {
 
 		std::string script_ = "C:\\Amit\\dev\\cpp\\of_v0.7.4_vs2010_release\\of_v0.7.4_vs2010_release\\apps\\myApps\\alpha-goldDust\\bin\\data\\packages\\sprintboard.py";
 		python::object result = python::exec_file(script_.c_str(), main, main);
-
 
 	}
 
