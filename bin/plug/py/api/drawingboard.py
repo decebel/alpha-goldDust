@@ -6,7 +6,9 @@ Engine shall instantiate the drawingboard module.
 import os
 import sys
 import pprint
+import imp
 pp = pprint.PrettyPrinter(indent=4)
+module_plugins = []
 
 class DrawingBoardInitError(Exception):
 	pass
@@ -213,7 +215,44 @@ def list_directory(directory, fileExt = ".py"):
 	fileList = [os.path.splitext(f)[0] for f in fileList if os.path.splitext(f)[1] in fileExt]
 	return fileList
 
+def load_data_plugins(self, directory, fileExt = ".py"):
+	modNames = list_directory(directory, fileExt)
 
+	for moduleName in modNames:
+		print "Checking module {0}".format(moduleName)
+		if moduleName == "drawingboard":
+			print "Skipping module {0}".format(moduleName)
+			continue
+		m_info = imp.find_module(moduleName, ["."])
+		m = imp.load_module(moduleName, *m_info)
+
+		for name in dir(m):
+			t = m.__dict__[name]
+			try:
+				if t.__bases__:
+					try:
+						if t.is_command and name != "DataCommand":
+							print "Found plugin class: {0}".format(name)
+							module_plugins.append(t)
+					except AttributeError:
+						print "class: {0} not a plugin class".format(name)
+			except AttributeError:
+				pass
+
+
+def create_data_commands():
+	cmds = []
+	for cls in module_plugins:
+		cmds.append(cls())
+	return cmds
+
+def main():
+	#load_data_plugins(".", ".py")
+	#create_data_commands()
+	pass
+
+if __name__ == '__main__':
+	main()
 
 
 
