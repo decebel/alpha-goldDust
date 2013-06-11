@@ -54,6 +54,7 @@ class TwitterDataCommand(drawingboard.DataCommand):
 	#def submit_command(self, port, **commandArgs):
 	def execute(self, **commandArgs):
 		searchString = commandArgs.get("search", "is cooler than") #from:decebel (from:username is also supported)
+		print("searching for {0}: ").format(searchString)
 		count = commandArgs.get("count", 25)
 		cached = commandArgs.get("cached", False)
 
@@ -64,18 +65,19 @@ class TwitterDataCommand(drawingboard.DataCommand):
 		engine = self.args["engine"]
 		result = {}
 		for tweet in engine.search(searchString, count=count, cached=cached):
-			#id = str(hash(tweet.author + tweet.date)) #  since the id is sometimes negative. TODO
-			#print "# {2} Date={0}. Author= {1}".format(tweet.date, tweet.author, id)			
+			tid = str(hash(tweet.author + tweet.date)) #  since the id is sometimes negative. TODO
+			print "# {2} Date={0}. Author= {1}".format(tweet.date, tweet.author, tid)			
 			rec = {"author" : tweet.author, "text" : tweet.text, "date" : tweet.date, "hashtags" : hashtags(tweet.text)}
 			#print "record = {0}".format(rec)
 			result[tweet.author] = rec
 			#print "I AM HERE"
-    		#print "\nRESULT={0}".format(result)
-    		#print "RECORD = {0}".format(rec)
+			#print "\nRESULT={0}".format(result)
+			#print "RECORD = {0}".format(rec)
+			#print "HOW MANY TIMES"
+			#pp.pprint(result)
 
-    		#pp.pprint(result)
-
-    		#print tweet.text
+			#print tweet.text
+		pp.pprint(result)	
 		print "FOR LOOP COMPLETE"
 
 		return result
